@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(img/mazda.jpg) no-repeat;
+    background-size: 100%;
+}
+.header{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-flex;
+    width: 100%;
+}
+.header h1{
+    color: rgb(245, 6, 6);
+    opacity: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    margin-left: 20px;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.header .menu1{
+    margin-left: 20px;
+}
+.header .menu1 ul li{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin: 10px;
+    opacity: 1;
+}
+.header .menu1 ul li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: large;
+}
+.header .search{
+    margin-top: 20px;
+    padding: 10px;
+    margin-left: 20px;
+}
+.header .search .input{
+    padding: 10px;
+    background-color: #c7f7ef;
+    opacity: .5;
+    border: none;
+    border-radius: 20px;
+    transition: opacity,transform .5s ease-in-out;
+}
+.header .search .button{
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #8dfced;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 20px;
+    transition: transform .5s ease-in-out;
+}
+.header .search .button:hover, .header .search .input:hover{
+    transform: scale(1.1,1.1);
+    opacity: 1;
+}
+.home, .menu1 ul li a:hover{
+    background-color: #5de0f7;
+}
+.menu2{
+    display: none;
+    transition: all 1.5s ease-in-out;
+}
+.menu1 ul li:hover .menu2{
+    display: block;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -40px;
+    transform-origin: top;
+    animation: whats 2s ease-in-out;
+}
+@keyframes whats{
+    0%{
+        transform: rotateX(-50deg);
+    }
+    20%{
+        transform: rotateX(40deg); 
+    }
+    40%{
+        transform: rotateX(-30deg);
+    }
+    60%{
+        transform: rotateX(20deg);
+    }
+    80%{
+        transform: rotateX(-10deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+.menu1 ul li:hover .menu2 ul{
+    background-color: rgb(0, 0, 0, 50%);
+    margin: 0;
+}
+.menu1 ul li:hover .menu2 ul li{
+    display: block;
+    border-bottom: 1px solid #585857;
+    border-radius: 5px;
+    text-align: left;
+}
+.menu1 ul li:hover .menu2 ul li span{
+    float: right;
+}
+.menu3{
+    display: none;
+}
+.hoverme:hover .menu3{
+    display: block;
+    position: absolute;
+    margin-top: -51px;
+    margin-left: 174px;
+    text-align: left;
+    transform-origin: top;
+    animation: whats 2s ease-in-out;
+}
+section{
+    float: right;
+    margin-top: 60px;
+    margin-right: 50px;
+}
+section form{
+    padding: 10px;
+    margin: 10px;
+}
+section form fieldset{
+    padding: 10px;
+    text-align: center;
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-transform: capitalize;
+    width: 300px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(66, 66, 65),
+                -5px -5px 5px #585857,
+                5px -5px 5px #585857,
+                -5px 5px 5px #585857;
+
+}
+section form fieldset legend{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    padding: 10px;
+    color: #a4f7c5;
+    font-weight: bolder;
+}
+section form input, textarea{
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #c7f7ef;
+    opacity: .5;
+    width: 100%;
+    transition: all .5s ease-in-out;
+    text-transform: capitalize;
+}
+section form .button{
+    background-color: #8dfced;
+    opacity: 1;
+    width: 30%;
+    
+}
+section form fieldset .eror{
+    color:#f00;
+    font-size: 12px;
+    text-align: left;
+}
+section form input:hover, textarea:hover{
+    opacity: 1;
+    transform: scale(1.05,1.05);
+}
+article{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 20px;
+    margin:100px 100px 100px ;
+    column-count: 2;
+    box-shadow: 5px 5px 5px rgb(66, 66, 65),
+                -5px -5px 5px #585857,
+                5px -5px 5px #585857,
+                -5px 5px 5px #585857;
+    padding: 10px;
+    color: #fff;
+    column-rule: 1px solid red;
+}
+article .img{
+    margin: 0;
+}
+article img{
+    width: 80%;
+    margin: 0;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px  red,
+                -5px -5px 8px blue,
+                5px -5px 8px blue,
+                -5px 5px 8px red;
+}
+article .text{
+    text-align: center;
+    font-weight: bold;
+    column-count: 2;
+    line-height: 1.2;
+}
+footer{
+    clear: both;
+    padding: 20px;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
